@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./Backend/Weather-Repoter
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"
+    environment:
+      WEATHER_API_KEY: ${WEATHER_API_KEY}
