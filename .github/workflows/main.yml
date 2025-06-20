@@ -32,7 +32,7 @@ jobs:
     - name: Build Frontend Docker image
       run: |
         docker build \
-          --build-arg NEXT_PUBLIC_API_BASE_URL=https://api.example.com \
+          --build-arg NEXT_PUBLIC_API_BASE_URL=http://ec2-18-171-150-205.eu-west-2.compute.amazonaws.com:8081 \
           -t $FRONTEND_IMAGE ./Frontend/wr-app
 
     - name: Push Frontend Docker image
