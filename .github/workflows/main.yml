@@ -23,7 +23,7 @@ jobs:
 
     # 🐳 Build and Push Backend Docker image
     - name: Build Backend Docker image
-      run: docker build -t $BACKEND_IMAGE ./Backend/WeatherApp
+      run: docker build -t $BACKEND_IMAGE ./Backend/Weather-Repoter
 
     - name: Push Backend Docker image
       run: docker push $BACKEND_IMAGE
