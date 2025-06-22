@@ -4,6 +4,19 @@ A full-stack weather reporting application built with **Spring Boot** and **Next
 
 ---
 
+## 🌐 Live Deployment URLs
+
+- 🔗 **Frontend:**  
+  [`http://ec2-18-171-150-205.eu-west-2.compute.amazonaws.com:3000/`](http://ec2-18-171-150-205.eu-west-2.compute.amazonaws.com:3000/)
+
+- 🔗 **Backend:**  
+  [`http://ec2-18-171-150-205.eu-west-2.compute.amazonaws.com:8081/`](http://ec2-18-171-150-205.eu-west-2.compute.amazonaws.com:8081/)
+
+- 📘 **Swagger API Docs:**  
+  [`http://ec2-18-171-150-205.eu-west-2.compute.amazonaws.com:8081/swagger-ui/index.html`](http://ec2-18-171-150-205.eu-west-2.compute.amazonaws.com:8081/swagger-ui/index.html)
+
+---
+
 ## 📦 Table of Contents
 
 - [🚀 Project Overview](#-project-overview)
@@ -192,3 +205,86 @@ The Weather Reporter App uses **GitHub Actions** to implement a fully automated 
 
 - Both frontend and backend Docker images are always **up-to-date in Docker Hub**, ready to be pulled and deployed on the EC2 server.
 - This allows for a **smooth and fast deployment** process, with minimal manual steps required after pushing code.
+
+---
+
+## 🚀 Deployment Strategy
+
+The Weather Reporter App is deployed on a **single EC2 instance** (Ubuntu) with **Docker** as the runtime environment for both frontend and backend containers.
+
+### 🧱 Deployment Steps
+
+1. **Provision EC2 Instance**
+   - Create an Ubuntu EC2 instance with open ports `3000` (frontend) and `8081` (backend).
+
+2. **Install Docker**
+   - Set up Docker and Docker Compose on the EC2 instance.
+
+3. **Environment Configuration**
+   - Prepare a `.env.prod` file containing production variables (e.g., API base URL).
+
+4. **Image Pull & Run**
+   - Manually pull the latest images from **Docker Hub**:
+     - `weather-reporter-backend`
+     - `weather-reporter-frontend`
+   - Run the containers with appropriate environment variables.
+
+### 🌐 Networking
+
+- **Backend** is exposed on port `8081`
+- **Frontend** is served on port `3000` and connects to the backend using the internal API base URL configured during Docker build
+
+---
+
+## 💡 Future Enhancements
+
+The project is built with extensibility in mind. Planned future features include:
+
+- ✅ **Weather Forecasting**  
+  Add 5-day and hourly forecast support
+
+- ✅ **Caching**  
+  Use Redis to cache frequently accessed weather data
+
+- ✅ **Rate Limiting**  
+  Prevent abuse by limiting requests per user/IP
+
+- ✅ **Multi-language Support**  
+  Add i18n for global audiences
+
+- ✅ **Dark Mode**  
+  UI toggle for light/dark theme support
+
+- ✅ **Analytics Dashboard**  
+  Visualize API usage, top cities, performance metrics
+
+- ✅ **Pluggable Weather Providers**  
+  Add support for additional APIs like OpenWeatherMap via `WeatherAdapter`
+
+- ✅ **WeatherAdapterFactory**  
+  Build a central resolver to choose providers at runtime
+
+---
+
+## 📌 Summary
+
+The Weather Reporter App is a full-stack, extensible, and professionally structured application that:
+
+✅ Follows **SOLID principles** for clean architecture  
+✅ Implements **design patterns** for scalability and maintainability  
+✅ Uses **Docker + GitHub Actions** for production-grade CI/CD  
+✅ Provides **secure backend** abstraction for API communication  
+✅ Runs efficiently on **AWS EC2** with minimal resource usage  
+
+These thoughtful design choices make the app:
+
+- **Robust** 🛡️  
+- **Extensible** 🔌  
+- **Readable** 📖  
+- **Testable** 🧪  
+- **Scalable** 📈  
+
+You’re not just seeing weather data—you’re seeing a system built to grow and evolve with real-world demands.
+
+---
+
