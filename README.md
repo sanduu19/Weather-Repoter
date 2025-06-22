@@ -9,10 +9,7 @@ A full-stack weather reporting application built with **Spring Boot** and **Next
 - 🔗 **Frontend:**  
   [`http://ec2-18-171-150-205.eu-west-2.compute.amazonaws.com:3000/`](http://ec2-18-171-150-205.eu-west-2.compute.amazonaws.com:3000/)
 
-- 🔗 **Backend:**  
-  [`http://ec2-18-171-150-205.eu-west-2.compute.amazonaws.com:8081/`](http://ec2-18-171-150-205.eu-west-2.compute.amazonaws.com:8081/)
-
-- 📘 **Swagger API Docs:**  
+- 📘 **Swagger API Docs - Backend:**  
   [`http://ec2-18-171-150-205.eu-west-2.compute.amazonaws.com:8081/swagger-ui/index.html`](http://ec2-18-171-150-205.eu-west-2.compute.amazonaws.com:8081/swagger-ui/index.html)
 
 ---
