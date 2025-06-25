@@ -280,8 +280,5 @@ These thoughtful design choices make the app:
 - **Readable** 📖  
 - **Testable** 🧪  
 - **Scalable** 📈  
-
-You’re not just seeing weather data—you’re seeing a system built to grow and evolve with real-world demands.
-
 ---
 
